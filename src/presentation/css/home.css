@@ -1,0 +1,15 @@
+.headDiv {
+    padding: 10px;
+    text-align: center;
+}
+.headText{
+    color: #FFF;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.mainContentDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10% 5%;
+}
