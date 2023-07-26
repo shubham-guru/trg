@@ -1,12 +1,12 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import { LuArrowRight } from 'react-icons/lu';
 
 type myProps = {
     title: string,
-    link: string
+    getClickedText: (text: string) => void,
 }
-const NavigateText:React.FC<myProps> = ({title, link}) => {
+const NavigateText:React.FC<myProps> = ({title, getClickedText}) => {
+
     const styles = {
         titleTxt: {
             color: '#fff',
@@ -19,10 +19,10 @@ const NavigateText:React.FC<myProps> = ({title, link}) => {
             cursor: 'pointer'
         }
     }
+
   return (
     <Box sx={{display: 'flex'}}>
-        <Typography onClick={()=>{}} textTransform={'uppercase'} sx={styles.titleTxt}>{title}</Typography>
-        <LuArrowRight color='#fff' style={{marginLeft: 3}} size={28} strokeWidth={0.75} />
+        <Typography onClick={()=>getClickedText(title)} textTransform={'uppercase'} sx={styles.titleTxt}>{title}</Typography>
     </Box>
   )
 }
