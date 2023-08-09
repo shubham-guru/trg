@@ -1,11 +1,11 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Link } from '@mui/material'
 import React from 'react'
 
 type myProps = {
     title: string,
-    getClickedText: (text: string) => void,
+    getText: (text: string) => void
 }
-const NavigateText:React.FC<myProps> = ({title, getClickedText}) => {
+const NavigateText:React.FC<myProps> = ({title, getText}) => {
 
     const styles = {
         titleTxt: {
@@ -16,13 +16,18 @@ const NavigateText:React.FC<myProps> = ({title, getClickedText}) => {
 	        animation: 'scale-up-center 0.8s ease-out',
             marginBottom: 2,
             textAlign: 'left',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            textDecoration: 'none'
         }
+    }
+
+    const handleHover = (e: any) => {
+        getText(e.target.innerHTML)
     }
 
   return (
     <Box sx={{display: 'flex'}}>
-        <Typography onClick={()=>getClickedText(title)} textTransform={'uppercase'} sx={styles.titleTxt}>{title}</Typography>
+        <Link onMouseEnter={handleHover} textTransform={'uppercase'} sx={styles.titleTxt}>{title}</Link>
     </Box>
   )
 }

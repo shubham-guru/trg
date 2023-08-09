@@ -1,49 +1,56 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import React, { useState } from "react";
-import bgImage from "../assets/images/mainBg.png";
+import bgImage from "../assets/images/mainBg.jpg";
 import NavigateText from "../components/NavigateText";
 import "../css/home.css";
 import { NavBarText } from "../../domain/constants/NavBarText";
 
 const Home = () => {
 
-  const [subNavText, setSubNavText] = useState<any>({});
+  const [linkOne, setLinkOne] = useState<string>('');
+  const [linkTwo, setLinkTwo] = useState<string>('');
+
   const styles = {
     container: {
-      // backgroundImage: `url(${bgImage})`,
-      // backgroundRepeat: "no-repeat",
+      backgroundImage: `url(${bgImage})`,
+      backgroundRepeat: "no-repeat",
       height: "100vh",
       backgroundColor: "#000",
       backgroundPosition: "center",
-      backgroundSize: "100% 100%",
+      backgroundSize: "100%",
     },
     linkBox: {
       fontFamily: "Poiret One, cursive",
     },
-  };
-
-  const handleNav = (text: string) => {
-    if(text === 'Gemstones Collection'){
-      setSubNavText({
-        text: 'READ',
-        link: '#'
-      })
-    }else{
-      console.log('error')
+    linkText: {
+      fontFamily: 'Jost, sans-serif', 
+      color: '#fff', 
+      textDecoration: "none",
+      margin: 5,
+      letterSpacing: 2,
+      lineHeight: 2
     }
   };
+
+  const handleText = (text: string) => {
+      if(text === 'Gemstones Collection'){
+        setLinkOne('https://google.com')
+        setLinkTwo('https://google.com')
+      }
+  }
+
 
   return (
     <Box sx={styles.container}>
       <div className="headDiv">
         <Typography
           className="headText"
-          sx={{ fontFamily: "Montserrat, sans-serif", fontSize: 20 }}>
+          sx={{ fontFamily: "Montserrat, sans-serif", fontSize: 20, fontWeight: 'bold' }}>
           The Royals of Golechas
         </Typography>
         <Typography
           className="headText"
-          sx={{ fontFamily: "Montserrat, sans-serif", fontSize: 15 }}>
+          sx={{ fontFamily: "Montserrat, sans-serif", fontSize: 15, fontWeight: 'bold' }}>
           Since 1955
         </Typography>
       </div>
@@ -56,14 +63,22 @@ const Home = () => {
                 <NavigateText
                   title={item}
                   key={index}
-                  getClickedText={handleNav}
+                  getText={handleText}
                 />
               );
             })}
           </Box>
         <div className='line' />
         {
-            <Typography color={'#fff'}>{subNavText.text}</Typography>
+          <div className="linkDiv">
+            <Typography>
+              <Link href={linkOne} style={styles.linkText} textTransform={'uppercase'}>Read</Link>
+            </Typography>
+
+            <Typography>
+              <Link href={linkTwo} style={styles.linkText} textTransform={'uppercase'}>Contact</Link>
+            </Typography>
+          </div>
         }
       </div>
 
