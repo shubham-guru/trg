@@ -1,16 +1,24 @@
-.headDiv {
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.mainRow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .headText{
-    color: #FFF;
+    color: #FFF !important;
     cursor: pointer;
     text-transform: uppercase;
-    text-align: left;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    font-weight: 100 !important;
+}
+.tagLine{
+    color: #FFF !important;
+    text-transform: capitalize;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-weight: 100 !important;
 }
 .mainContentDiv{
     display: flex;

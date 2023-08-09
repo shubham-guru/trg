@@ -1,9 +1,11 @@
-import { Box, Link, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React, { useState } from "react";
 import bgImage from "../assets/images/mainBg.jpg";
 import NavigateText from "../components/NavigateText";
 import "../css/home.css";
 import { NavBarText } from "../../domain/constants/NavBarText";
+import { Col, Row, Typography, Image } from "antd";
+import divider from '../assets/images/divider.svg'
 
 const Home = () => {
 
@@ -42,11 +44,11 @@ const Home = () => {
 
   return (
     <Box sx={styles.container}>
-      <div className="headDiv">
-        <Typography
+      {/* <div className="headDiv"> */}
+        {/* <Typography
           className="headText"
           sx={{ fontFamily: "Cinzel, serif", fontSize: 20}}>
-          The Royals of Golechas
+          The Royals of Golecha's
           <Typography
           className="headText"
           sx={{ fontFamily: "Cinzel, serif", fontSize: 14 }}>
@@ -57,11 +59,32 @@ const Home = () => {
         <Typography className="headText" sx={{ textAlign: "right", fontFamily: 'Jost, sans-serif', letterSpacing: 2 }}>
             A luxury of <br />
             class and substance
-          </Typography>
-      </div>
+          </Typography> */}
+      {/* </div> */}
 
-      <div className="mainContentDiv">
-        <div style={{display: 'flex', alignItems: 'center'}}>
+      <Row className="mainRow">
+      <Col span={24}>
+        <Typography.Title level={2} className="headText">
+            The Royals of Golecha's
+        </Typography.Title>
+      
+        <Typography.Title level={5} className="headText">
+            Since 1955
+        </Typography.Title>
+        </Col>
+
+          <Col span={24}>
+          <Image src={divider} alt="divider" width={100} preview={false} />
+        </Col>
+
+        <Col span={24}>
+        <Typography.Title level={5} className="tagLine">
+          A luxury of class and substance
+        </Typography.Title>
+        </Col>
+
+      </Row>
+        {/* <div style={{display: 'flex', alignItems: 'center'}}>
           <Box sx={styles.linkBox}>
             {NavBarText.map((item: string, index) => {
               return (
@@ -85,9 +108,8 @@ const Home = () => {
             </Typography>
           </div>
         }
-      </div>
-
-      </div>
+      </div> */}
+       
     </Box>
   );
 };
