@@ -45,14 +45,19 @@ const Home = () => {
       <div className="headDiv">
         <Typography
           className="headText"
-          sx={{ fontFamily: "Montserrat, sans-serif", fontSize: 20, fontWeight: 'bold' }}>
+          sx={{ fontFamily: "Cinzel, serif", fontSize: 20}}>
           The Royals of Golechas
-        </Typography>
-        <Typography
+          <Typography
           className="headText"
-          sx={{ fontFamily: "Montserrat, sans-serif", fontSize: 15, fontWeight: 'bold' }}>
+          sx={{ fontFamily: "Cinzel, serif", fontSize: 14 }}>
           Since 1955
         </Typography>
+        </Typography>
+
+        <Typography className="headText" sx={{ textAlign: "right", fontFamily: 'Jost, sans-serif', letterSpacing: 2 }}>
+            A luxury of <br />
+            class and substance
+          </Typography>
       </div>
 
       <div className="mainContentDiv">
@@ -82,12 +87,6 @@ const Home = () => {
         }
       </div>
 
-        <Box>
-          <Typography className="headText" sx={{ textAlign: "right" }}>
-            A luxury of <br />
-            class and substance
-          </Typography>
-        </Box>
       </div>
     </Box>
   );

@@ -1,11 +1,16 @@
 .headDiv {
     padding: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .headText{
     color: #FFF;
     cursor: pointer;
     text-transform: uppercase;
+    text-align: left;
 }
 .mainContentDiv{
     display: flex;
