@@ -1,9 +1,25 @@
 .mainRow {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/images/mainBg.jpg');
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: #000;
+    background-position: center;
+    background-size: 100%;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;     
 }
+
 .headText{
     color: #FFF !important;
     cursor: pointer;
@@ -20,20 +36,37 @@
     font-style: italic;
     font-weight: 100 !important;
 }
-.mainContentDiv{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10% 5%;
-}
-.line{
-    border-right: solid 2px #FFF;
-    height: 190px;
-    margin-left: 2em;
-}
-.linkDiv{
-    margin: 10px;
+.downArrowIcon{
+    border-radius: 50%;
+    border: solid 1px #FFF;
+    padding: 5px;
     position: relative;
-    bottom: 70px;
-    text-align: left;
+    animation: upDown 2s;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+    from {background-position: center; background-size: 100%; }
+    to {background-position: -400px;background-size: 120%;}
+    }
+    
+    @keyframes slidein {
+    0% {background-position: center;background-size: 100%; }
+    50% {background-position: -300px;background-size: 120%;}
+    100% {background-position: center;background-size: 100%; }
+    }
+
+@keyframes upDown {
+    0%{
+        top: 10px;
+    }
+    50%{
+        top: 30px;
+    }
+    100%{
+        top: 10px;
+    }
 }

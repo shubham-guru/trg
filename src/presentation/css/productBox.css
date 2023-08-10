@@ -1,0 +1,16 @@
+.productImage{
+    margin-top: 20px;
+    cursor: pointer;
+	transform: scale(1);
+	transition: .3s ease-in-out;
+}
+.productImage:hover{
+	transform: scale(1.05);
+}
+.imageText{
+    font-family: 'Cinzel', serif;
+}
+.collectionTitle{
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 10px;
+}
