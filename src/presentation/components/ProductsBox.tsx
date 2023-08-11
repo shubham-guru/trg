@@ -10,16 +10,17 @@ const ProductsBox = () => {
         <Col span={24}>
             <Title level={2} className='collectionTitle'>TRG Collections</Title>
         </Col>
+        <Row className='productListRow'>
             {
                 ProductList.map((item: {name: string, src: string}, index: number) => {
                     return(
-                        <Col span={12}>
-                            {/* <Text className='imageText'>{item.name}</Text> */}
-                            <Image src={item.src} width={450} alt={item.name} className='productImage' key={index} preview={false} />
+                        <Col span={10} style={{backgroundImage: `url(${item.src})` }} key={index} className='productImage'>
+                            <Text className='imageText'>{item.name}</Text>
                         </Col>
                     )
                 })
             }
+            </Row>
     </Row>
   )
 }
