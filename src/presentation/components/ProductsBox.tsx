@@ -18,8 +18,10 @@ const ProductsBox = () => {
             {
                 ProductList.map((item: any, index: number) => {
                     return(
-                        <Col span={11} style={{backgroundImage: `url(${productBg})` }} key={index} className='productImage'>
-                            <Text className='imageText'>{item.name}</Text>
+                        <Col xs={24} lg={11} style={{backgroundImage: `url(${productBg})` }} key={index} className='productImage'>
+                            <Col lg={24}>
+                             <Text className='imageText'>{item.name}</Text>
+                            </Col>
                             <Col span={24} className='imageLinksCol'>
                                 <Text className='imageTextLink' onClick={()=>navigate(pageRoutes.READ, {state: {route: item.name, src: item.src, data: item.data}})}>Read</Text>
                                 <Text className='imageTextLink' onClick={()=>navigate(pageRoutes.VIEW_COLLECTIONS, {state: {route: item.name}})}>View Collection</Text>
