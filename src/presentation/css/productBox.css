@@ -7,21 +7,37 @@
     cursor: pointer;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100%;
     padding: 150px;
-	transform: scale(1);
-	transition: .3s ease-in-out;
 }
-.productImage:hover{
-	transform: scale(1.05);
-}
+
 .imageText{
     font-family: 'Cinzel', serif;
     font-size: 20px !important;
-    background-color: rgba(255, 255, 255, .3);
     padding: 5px;
+    color: #d8b565;
 }
 .collectionTitle{
     font-family: 'Poiret One', cursive;
     letter-spacing: 10px;
+    margin-bottom: -20px !important;
+}
+.imageTextLink{
+    font-family: 'Cinzel', serif;
+    font-size: 16px !important;
+    padding: 5px 12px;
+    color: #fff !important;
+    transition: .3s ease-in !important;
+    background-color: rgba(255, 255, 255, .2);
+}
+.imageTextLink:hover{
+    letter-spacing: 3px;
+}
+.imageLinksCol{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }

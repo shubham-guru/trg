@@ -1,0 +1,12 @@
+.genericNoteRow{
+    display: flex;
+    justify-content: center;
+}
+.genericNoteHeading{
+    font-family: 'Cinzel', serif;
+    color: #222 !important;
+}
+.genericNoteText{
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 4px;
+}

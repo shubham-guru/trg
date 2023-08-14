@@ -1,0 +1,26 @@
+.headingCol{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 50px;
+    width: 100%;
+}
+.heading{
+    font-family: 'Cinzel', serif;
+    color: #fff !important;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.heading:hover{
+    letter-spacing: 4px;
+}
+.readCol{
+    display: flex;
+    justify-content: center;
+}
+.collectionText{
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

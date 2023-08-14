@@ -1,28 +1,34 @@
-import one from '../../presentation/assets/images/one.jpg';
-import two from '../../presentation/assets/images/two.jpg'
-import three from '../../presentation/assets/images/three.jpg'
-import four from '../../presentation/assets/images/four.jpg'
-import five from '../../presentation/assets/images/five.jpg'
+import { Earrings, Gemstones, Pearl, Statement, Studs } from "./ProductsContent";
+import gemStone from '../../presentation/assets/images/gemstoneCollBg.png';
+import statement from '../../presentation/assets/images/stateCollBg.jpg';
+import pearl from '../../presentation/assets/images/pearlCollBg.jpg';
+import earring from '../../presentation/assets/images/earringCollBg.jpg';
+import studs from '../../presentation/assets/images/studsColl.jpg';
 
 export const ProductList = [
   {
     name: "Gemstones Collection",
-    src: one
+    data: Gemstones,
+    src: gemStone
   },
   {
     name: "Studs Collection",
-    src: two
+    data: Studs,
+    src: studs
   },
   {
     name: "Statement Collection",
-    src: three
+    data: Statement,
+    src: statement
   },
   {
     name: "Pearl Collection",
-    src: four
+    data: Pearl,
+    src: pearl
   },
   {
-    name: "The Royals Collection",
-    src: five
+    name: "Earrings Collection",
+    data: Earrings,
+    src: earring
   } 
 ];

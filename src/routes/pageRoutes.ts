@@ -1,8 +1,7 @@
 const pageRoutes = {
     HOME: "/",
-    // LOGIN_BY_PASSWORD: "/login/:token",
-    ABOUT: "/about",
-    OUR_HISTORY: "/history",
+    VIEW_COLLECTIONS: "/view-collections",
+    READ: "/read"
   };
   
   export default pageRoutes;

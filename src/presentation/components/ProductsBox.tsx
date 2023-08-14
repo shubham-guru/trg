@@ -1,10 +1,14 @@
 import React from 'react'
-import { Row, Col, Image, Typography } from 'antd'
+import { Row, Col, Typography } from 'antd'
 import { ProductList } from '../../domain/constants/ProductsList'
+import { useNavigate } from 'react-router-dom'
+import productBg  from '../assets/images/productBg.jpg'
+import pageRoutes from '../../routes/pageRoutes'
 import '../css/productBox.css'
 
 const ProductsBox = () => {
-    const { Title,Text } = Typography
+    const { Title, Text } = Typography
+    const navigate = useNavigate() 
   return (
     <Row gutter={[0, 50]}>
         <Col span={24}>
@@ -12,15 +16,19 @@ const ProductsBox = () => {
         </Col>
         <Row className='productListRow'>
             {
-                ProductList.map((item: {name: string, src: string}, index: number) => {
+                ProductList.map((item: any, index: number) => {
                     return(
-                        <Col span={10} style={{backgroundImage: `url(${item.src})` }} key={index} className='productImage'>
+                        <Col span={11} style={{backgroundImage: `url(${productBg})` }} key={index} className='productImage'>
                             <Text className='imageText'>{item.name}</Text>
+                            <Col span={24} className='imageLinksCol'>
+                                <Text className='imageTextLink' onClick={()=>navigate(pageRoutes.READ, {state: {route: item.name, src: item.src, data: item.data}})}>Read</Text>
+                                <Text className='imageTextLink' onClick={()=>navigate(pageRoutes.VIEW_COLLECTIONS, {state: {route: item.name}})}>View Collection</Text>
+                            </Col>
                         </Col>
                     )
                 })
             }
-            </Row>
+        </Row>
     </Row>
   )
 }
